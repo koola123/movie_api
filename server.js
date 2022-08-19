@@ -8,7 +8,7 @@ http.createServer((request, response) => {
     q = url.parse(addr, true),
     filePath = '';
 
-  fs.appendFile('.logtxt', 'URL: ' + addr + '\nTimestamp: ' + new Date() + '\n\n', (err, data) => {
+  fs.appendFile('log.txt', 'URL: ' + addr + '\nTimestamp: ' + new Date() + '\n\n', (err, data) => {
     if (err) {
       console.log(err)
     } else {
